@@ -166,8 +166,8 @@
   },
   {
     "path": "docs/PUBLICATION.md",
-    "sha256": "2566b00979050d2944bcab50d12872eed9c978b73e97490ac15d470e7f17eb5b",
-    "bytes": 1728
+    "sha256": "774cfa17a5bc77ffa9a4812af0ba6600b1de8664600c50776e7c29a7eb5422c8",
+    "bytes": 2005
   },
   {
     "path": "docs/SOURCE_MAP.md",
@@ -176,8 +176,8 @@
   },
   {
     "path": "docs/VERIFICATION.md",
-    "sha256": "45772f8a6b0f957647246555e9c33cb88ec38d4a8ec33bd51840a3bc49755c7e",
-    "bytes": 4894
+    "sha256": "ae78b0ffb1d00d2d8fc07dd55069f4dc498f1c021b8fa35bb083d4cd9dc36861",
+    "bytes": 5445
   },
   {
     "path": "docs/WORKFLOWS.md",
@@ -616,18 +616,18 @@
   },
   {
     "path": "requirements-app.txt",
-    "sha256": "4dcaf613bd866c6527656a23f97bbdbfabffc7a9d22664d2c065c28b3515b534",
-    "bytes": 355
+    "sha256": "328cd76d952b54ab8cdcd1ad185197e8ca4bf580d2aa46f076637081b1ab3c8a",
+    "bytes": 370
   },
   {
     "path": "requirements-ci.txt",
-    "sha256": "a5cae2591b228e76db530d70379ab4f234041de56eb4bf82fba6c80b0dcd12e6",
-    "bytes": 348
+    "sha256": "7874fd97607bd8251eb88dc05f51d87a7671e193dc3b95700527ccb3a038dd92",
+    "bytes": 363
   },
   {
     "path": "requirements-validated.txt",
-    "sha256": "fcf9c92a19ed2ba3b0daa946f12889682e3a928c691a6a02df1f3fab8b86f154",
-    "bytes": 533
+    "sha256": "2220b97edf4b32b6f9fa9ac5ac61c6535b0287ab22f6b1ea8ce0654532e3002f",
+    "bytes": 548
   },
   {
     "path": "requirements.txt",

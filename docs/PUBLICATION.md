@@ -18,7 +18,9 @@
 |MinerU 2.7.1|安装包AGPL-3.0|不分发其包/权重；正式外部服务前核查集成许可义务|
 |教育资料和课程全文|未获公开授权|只用于用户本机测试，Git排除|
 
-当前GitHub准备遵循用户要求：先安全扫描和完整源码审查，再准备私有仓库；**公开可见性必须由用户确认**。即使用户同意public，也还需要确认课程衍生源码的公开分发权利；否则应保持私有或另行实现可独立授权的版本。
+完整源码已提交到私有仓库 [shopkeeper-multimodal-rag](https://github.com/gretchenrohrscheib426-droid/shopkeeper-multimodal-rag)，分支为 `codex/reproduction`。首个源码提交为 `3389828`；后续依赖修正和验证结果可在提交历史及Actions查看。安全扫描覆盖暂存区实际内容，结果见 `artifacts/release_validation/security.json`。
+
+**公开可见性必须由用户确认**。即使用户同意public，也还需要确认课程衍生源码的公开分发权利；否则应保持私有或另行实现可独立授权的版本。
 
 ## 公开前的具体确认项
 
