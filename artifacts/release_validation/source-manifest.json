@@ -26,13 +26,13 @@
   },
   {
     "path": "README.md",
-    "sha256": "070bc854fabae8ac399ccad9b03efafcd20b678078052b0790cbca2f56e7773d",
-    "bytes": 4951
+    "sha256": "a51030574dc75da9359ccacc02df23811dd19aa1674cfd5e5b1bd6b191dc3dae",
+    "bytes": 5048
   },
   {
     "path": "README_EN.md",
-    "sha256": "29d9ffae60a09271743befd3506a4c2abb9cb9bb06f678af1e5eb7b578ebb67e",
-    "bytes": 1710
+    "sha256": "093c3d47319bad7335293a07bc7d2a51ac66fe553ed04ea3cf37061a83723c3c",
+    "bytes": 1847
   },
   {
     "path": "SECURITY.md",
@@ -88,6 +88,11 @@
     "path": "artifacts/release_validation/model-auth.json",
     "sha256": "f15e9eeb19505cf1e9a865f6a78ca9354c956326595342bcc100f5d4a610712d",
     "bytes": 1662
+  },
+  {
+    "path": "artifacts/release_validation/publication.json",
+    "sha256": "eef474963b14b5da5f0f08421c7cc99d9de112ba3d687f25d8faf64b25a2874e",
+    "bytes": 348
   },
   {
     "path": "artifacts/release_validation/qwen3-plus-name-check.json",
@@ -176,8 +181,8 @@
   },
   {
     "path": "docs/PUBLICATION.md",
-    "sha256": "774cfa17a5bc77ffa9a4812af0ba6600b1de8664600c50776e7c29a7eb5422c8",
-    "bytes": 2005
+    "sha256": "a8a321d1c25dc1333a62e2e31bcb0bc7ea8298c5ebfbf243b89055c718d56c17",
+    "bytes": 2013
   },
   {
     "path": "docs/SOURCE_MAP.md",
@@ -186,8 +191,8 @@
   },
   {
     "path": "docs/VERIFICATION.md",
-    "sha256": "c275644e0fdc133b120e7370a14b580ff2f9b8045e81680288f92494b04a6cd2",
-    "bytes": 6023
+    "sha256": "6cf860155bfcb39e56b618242ac3df573a40a38f201ede1436fcc71061a9a1cf",
+    "bytes": 6089
   },
   {
     "path": "docs/WORKFLOWS.md",

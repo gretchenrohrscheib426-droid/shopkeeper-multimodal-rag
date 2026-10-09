@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-09T16:45:27.370787+00:00",
+  "authentication": "none",
+  "url": "https://github.com/gretchenrohrscheib426-droid/shopkeeper-multimodal-rag",
+  "page_http_status": 200,
+  "repository_http_status": 200,
+  "private": false,
+  "source_http_status": 200,
+  "source_path": "knowledge/processor/import_processor/main_graph.py"
+}

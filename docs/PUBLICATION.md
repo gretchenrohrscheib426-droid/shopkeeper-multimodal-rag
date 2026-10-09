@@ -13,18 +13,15 @@
 |类别|状态|处置|
 |---|---|---|
 |原创手册与流程图|单独CC0声明|允许作为样例分发|
-|新写交付文档、测试和修复|可供用户审查|随完整本地包与受限交付准备|
-|课程衍生业务源码|未找到允许公开的明确许可|不直接公开，不擅自声明整仓MIT|
+|新写交付文档、测试和修复|已随源码交付|按用户要求公开展示|
+|课程衍生业务源码|材料中未找到明确的公开许可文件|保留来源说明，不擅自声明整仓MIT；可见性按用户明确要求设为公开|
 |MinerU 2.7.1|安装包AGPL-3.0|不分发其包/权重；正式外部服务前核查集成许可义务|
 |教育资料和课程全文|未获公开授权|只用于用户本机测试，Git排除|
 
-完整源码已提交到私有仓库 [shopkeeper-multimodal-rag](https://github.com/gretchenrohrscheib426-droid/shopkeeper-multimodal-rag)，分支为 `codex/reproduction`。首个源码提交为 `3389828`；后续依赖修正和验证结果可在提交历史及Actions查看。安全扫描覆盖暂存区实际内容，结果见 `artifacts/release_validation/security.json`。
+完整源码已提交到公开仓库 [shopkeeper-multimodal-rag](https://github.com/gretchenrohrscheib426-droid/shopkeeper-multimodal-rag)，分支为 `codex/reproduction`。首个源码提交为 `3389828`，本地完整交付版本为 `613e7ca`；后续提交及验证结果可在提交历史与Actions查看。安全扫描覆盖暂存区实际内容，结果见 `artifacts/release_validation/security.json`。
 
-**公开可见性必须由用户确认**。即使用户同意public，也还需要确认课程衍生源码的公开分发权利；否则应保持私有或另行实现可独立授权的版本。
+## 公开记录
 
-## 公开前的具体确认项
-
-1. 当前版本包含课程衍生节点骨架与实现，是否具有公开分发授权及应保留的署名/许可？
-2. 授权范围确认后，是否将已审查的私有仓库改为public？
+2026-10-10（Asia/Shanghai），用户在交付审查后的确认环节明确回复“公开”。已按该请求将仓库由private改为public，并核对GitHub返回的可见性。用户的发布指令与上游许可文件是不同证据；此次操作没有补造课程授权文件、删除来源声明或新增整仓MIT许可。
 
 尚无已部署的公网运行环境，因此GitHub源码链接与在线Demo是两件不同的交付；不提供虚构在线地址。

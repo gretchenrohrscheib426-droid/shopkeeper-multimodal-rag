@@ -1,6 +1,6 @@
 {
   "scope": "exact staged blobs; heuristics and local secret matching, not a full security audit",
   "status": "PASS",
-  "files": 154,
+  "files": 155,
   "issues": []
 }
