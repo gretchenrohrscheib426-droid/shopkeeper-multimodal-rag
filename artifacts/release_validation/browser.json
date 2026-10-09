@@ -1,0 +1,62 @@
+{
+  "kind": "real_browser_with_durable_task_crosscheck",
+  "checks": {
+    "pdf_upload": {
+      "task_id": "892e0d9b083e4b6ea15468caad58dcf0",
+      "status": "completed",
+      "seconds": 47.211,
+      "citations": 0,
+      "rewritten_query": null
+    },
+    "clarification": {
+      "task_id": "06f992bbfb0a4e7d9083bcbe9cbeb02b",
+      "status": "completed",
+      "seconds": 0.508,
+      "citations": 0,
+      "rewritten_query": null
+    },
+    "docx_table_answer": {
+      "task_id": "0e9747ad13564f7093bfc303a1c71efa",
+      "status": "completed",
+      "seconds": 7.676,
+      "citations": 1,
+      "rewritten_query": "PDF 和 DOCX 格式分别适合什么使用场景？"
+    },
+    "multi_turn_rewrite": {
+      "task_id": "c7071be952b2441e9a7109f0a72b80df",
+      "status": "completed",
+      "seconds": 7.319,
+      "citations": 1,
+      "rewritten_query": "DOCX 格式有什么用途？"
+    },
+    "ui_cancel": {
+      "task_id": "5d8d21f7c0c14e06b9822ce364d31de3",
+      "status": "cancelled",
+      "seconds": 5.958,
+      "citations": 0,
+      "rewritten_query": null
+    }
+  },
+  "ui_observations": [
+    "Real PDF upload through browser completed; original PDF opened in second browser tab",
+    "DOCX table citations displayed and original source plus image visually inspected",
+    "Page reload restored prior question, answer and citation",
+    "Follow-up question resolved second format to DOCX using real model rewrite",
+    "Cancellation ended cancelled, re-enabled send button and disabled cancel button",
+    "Two expected 401 console entries appeared after local browser authentication expired; re-authenticated through real localhost login and subsequent requests succeeded"
+  ],
+  "screenshots": [
+    {
+      "file": "docs/assets/docx-table-citation.png",
+      "sha256": "a07ac9aa80be6298cd65ac7a0706fe18598da4053eafdf9df12e706940fa3233"
+    },
+    {
+      "file": "docs/assets/original-pdf.png",
+      "sha256": "2333c9f9d5c5a4915c32c533158865198fab5b12874fa810d5d4679df5832c03"
+    },
+    {
+      "file": "docs/assets/pdf-citation-verified.png",
+      "sha256": "541667da907321142980efde7ad2ad33c5dfb614e1ea7c6ae153fe88107afa45"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+This original regression fixture is made available under CC0-1.0.
+It describes test expectations, not measured product performance.

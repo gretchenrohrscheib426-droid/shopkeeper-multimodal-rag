@@ -1,0 +1,33 @@
+{
+  "kind": "real_services",
+  "timestamp_utc": "2026-10-09T14:40:32Z",
+  "checks": {
+    "mongo": {
+      "status": "PASS",
+      "ping": 1.0,
+      "readback": true,
+      "server_clock_delta_seconds": 0.17,
+      "seconds": 0.063
+    },
+    "minio": {
+      "status": "PASS",
+      "verified_object": "doctor/doctor-eda1c8e9ee714f8d81c10d80f6e16dfb.txt",
+      "sha256": "403ff2ab16f947e07750c42266f66ec20847cb74b6cdd95d42dfac224e39e931",
+      "bucket": "shopkeeper-reproduction-v2",
+      "upload": true,
+      "list_objects": true,
+      "size_verified": true,
+      "sha256_readback": true,
+      "seconds": 0.031
+    },
+    "milvus": {
+      "status": "PASS",
+      "server_version": "pkg/v2.5.5",
+      "upsert_count": 1,
+      "top_id": "provenance-probe",
+      "score": 1.0000001192092896,
+      "seconds": 9.984
+    }
+  },
+  "status": "PASS"
+}

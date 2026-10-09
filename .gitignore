@@ -1,0 +1,48 @@
+# Protected local inputs and environments
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+.venv*/
+**/__pycache__/
+*.py[cod]
+.idea/
+.runtime/
+data/
+**/temp_data/
+**/temp_dir/
+artifacts/verification/baseline/
+artifacts/private/
+*.local.*
+*.zip
+*.pdf
+*.docx
+*.safetensors
+*.bin
+*.pth
+*.pt
+node_modules/
+# Earlier incomplete package retained in place, never used as runtime.
+/processor/
+/api/
+/service/
+/shcemal/
+/prompt/
+/test/
+/__init__.py
+# Historical exploratory scripts contain private inputs; curated tests live in tests/.
+knowledge/test/
+knowledge/掌柜智库面试指南.md
+
+!.env.example
+!examples/public/manual/*.pdf
+!examples/public/manual/*.docx
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+AGENTS.md
+
+# Host-specific recovery records remain local.
+docs/EXECUTION_PLAN.md
+docs/ENVIRONMENT_AUDIT.md

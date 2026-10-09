@@ -1,0 +1,148 @@
+{
+  "manifest": {
+    "dataset_sha256": "3793bd3d81dd0f80f16942f3c2c0e936f2402961744b6b21e6c9d86f243d5efe",
+    "annotation": "Agent-authored, source-anchored; not independently human annotated",
+    "corpus": [
+      {
+        "document_id": "4bd443d1705b6e32cea39afee86f516d",
+        "version": "7910ec849402bd25c1f104fa0968853a799740ac949ff89740e035685a142a2c",
+        "chunks": 11
+      },
+      {
+        "document_id": "c17f8d8ebdea67a075fc12515cdf6b8c",
+        "version": "6058f1b537f0bbd406f3f973ab8e746d12cfcc16dd69adc9ed91be5ebf1373f4",
+        "chunks": 18
+      }
+    ],
+    "model": "qwen-plus",
+    "embedding_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "reranker_revision": "55611d7bca2a7133960a6d3b71e083071bbfc312",
+    "candidate_budget": 10,
+    "rrf_k": 60,
+    "web_enabled": false,
+    "frozen_before_run": true,
+    "tuning_performed": false,
+    "question_count": 60,
+    "started_utc": "2026-10-09T15:47:56.369667+00:00",
+    "answer_mode": "Only full rerank pipeline; other variants measure retrieval",
+    "citation_support_metric": "ID and literal quote existence; not semantic entailment",
+    "cost_currency": null,
+    "cost_reason": "No verified workspace billing rate supplied; report observed tokens only"
+  },
+  "splits": {
+    "all": {
+      "questions": 60,
+      "completed": 59,
+      "failed": 1,
+      "success_rate": 0.983333,
+      "hot_p50_seconds": 6.922,
+      "hot_p95_seconds": 9.22,
+      "refusal_correct": 7,
+      "refusal_total": 7,
+      "citation_id_valid_rate": 1.0,
+      "literal_quote_valid_rate": 1.0,
+      "answer_terms_heuristic_rate": 0.943396,
+      "retrieval": {
+        "dense": {
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 0.860063
+        },
+        "hybrid": {
+          "recall_at_5": 0.981132,
+          "recall_at_10": 0.981132,
+          "mrr_at_10": 0.916667
+        },
+        "hyde_rrf": {
+          "recall_at_5": 0.981132,
+          "recall_at_10": 0.981132,
+          "mrr_at_10": 0.908805
+        },
+        "rerank": {
+          "recall_at_5": 0.981132,
+          "recall_at_10": 0.981132,
+          "mrr_at_10": 0.95283
+        }
+      }
+    },
+    "dev": {
+      "questions": 40,
+      "completed": 39,
+      "failed": 1,
+      "success_rate": 0.975,
+      "hot_p50_seconds": 7.047,
+      "hot_p95_seconds": 8.755,
+      "refusal_correct": 6,
+      "refusal_total": 6,
+      "citation_id_valid_rate": 1.0,
+      "literal_quote_valid_rate": 1.0,
+      "answer_terms_heuristic_rate": 0.941176,
+      "retrieval": {
+        "dense": {
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 0.855392
+        },
+        "hybrid": {
+          "recall_at_5": 0.970588,
+          "recall_at_10": 0.970588,
+          "mrr_at_10": 0.911765
+        },
+        "hyde_rrf": {
+          "recall_at_5": 0.970588,
+          "recall_at_10": 0.970588,
+          "mrr_at_10": 0.911765
+        },
+        "rerank": {
+          "recall_at_5": 0.970588,
+          "recall_at_10": 0.970588,
+          "mrr_at_10": 0.941176
+        }
+      }
+    },
+    "frozen": {
+      "questions": 20,
+      "completed": 20,
+      "failed": 0,
+      "success_rate": 1,
+      "hot_p50_seconds": 6.844,
+      "hot_p95_seconds": 9.268,
+      "refusal_correct": 1,
+      "refusal_total": 1,
+      "citation_id_valid_rate": 1.0,
+      "literal_quote_valid_rate": 1.0,
+      "answer_terms_heuristic_rate": 0.947368,
+      "retrieval": {
+        "dense": {
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 0.868421
+        },
+        "hybrid": {
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 0.925439
+        },
+        "hyde_rrf": {
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 0.903509
+        },
+        "rerank": {
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 0.973684
+        }
+      }
+    }
+  },
+  "observed_query_tokens": {
+    "input_tokens": 261763,
+    "output_tokens": 14123,
+    "total_tokens": 275886
+  },
+  "ttft_seconds": null,
+  "ttft_reason": "Validated whole-answer SSE, not raw model token streaming",
+  "cold_first_query_seconds": 12.688,
+  "completed_utc": "2026-10-09T15:55:31.358028+00:00"
+}

@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+extend-exclude = ["knowledge/test", ".venv", ".venv_app", ".venv_py313"]
+
+[tool.mypy]
+explicit_package_bases = true
+check_untyped_defs = true

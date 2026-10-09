@@ -1,0 +1,68 @@
+{
+  "kind": "real_sdk_fault_injection",
+  "checks": [
+    {
+      "name": "mongo_disconnected",
+      "status": "PASS",
+      "task_id": "fb9d9e0d2f3e443e9b92e02233392920",
+      "terminal_status": "failed",
+      "error": {
+        "error_type": "QueryProcessError",
+        "node": "item_name_confirmed_node",
+        "error": "查询失败，没有发布未经验证的答案。请查看组件就绪状态。"
+      },
+      "seconds": 1.078
+    },
+    {
+      "name": "milvus_disconnected",
+      "status": "PASS",
+      "task_id": "860ae1e6ed9242c9997ee1946270f42d",
+      "terminal_status": "failed",
+      "error": {
+        "error_type": "RuntimeError",
+        "node": "query",
+        "error": "查询失败，没有发布未经验证的答案。请查看组件就绪状态。"
+      },
+      "seconds": 7.781
+    },
+    {
+      "name": "minio_disconnected",
+      "status": "PASS",
+      "task_id": "75d8848d30304b48821ed3f9d95e4144",
+      "terminal_status": "failed",
+      "error": {
+        "error_type": "ImportProcessError",
+        "node": "md_to_img_node",
+        "error": "导入失败；请检查对应节点配置、服务就绪状态和本机诊断日志。"
+      },
+      "seconds": 1.281
+    },
+    {
+      "name": "model_invalid_key",
+      "status": "PASS",
+      "error_type": "AuthenticationError",
+      "http_status": 401,
+      "seconds": 0.578
+    },
+    {
+      "name": "model_deadline",
+      "status": "PASS",
+      "error_type": "APITimeoutError",
+      "http_status": null,
+      "seconds": 0.031
+    },
+    {
+      "name": "cancel_before_processing",
+      "status": "PASS",
+      "terminal_status": "cancelled",
+      "task_id": "4dd5645f48cf4715bb5ab19621656e7c"
+    },
+    {
+      "name": "old_documents_preserved",
+      "status": "PASS",
+      "old_document_count": 4
+    }
+  ],
+  "containers_changed": false,
+  "status": "PASS"
+}

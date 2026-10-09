@@ -1,0 +1,29 @@
+{
+  "kind": "real_remote_models",
+  "timestamp": "2026-10-09T15:20:29.769036+00:00",
+  "model_config_source": "file",
+  "same_key": true,
+  "key_present": true,
+  "calls": {
+    "text": {
+      "status": "PASS",
+      "model": "qwen-plus",
+      "content": "文档问答需要引用原文，是为了确保答案的准确性、可验证性和可追溯性，使用户能直接核对信息来源，避免主观臆断或幻觉生成。",
+      "seconds": 1.266
+    },
+    "image_summary": {
+      "status": "PASS",
+      "model": "qwen3-vl-plus",
+      "content": "该图片为一个**操作顺序示意图**，展示了三个按顺序执行的步骤（S1 → S2 → S3），以深蓝色圆角矩形框表示各步骤，框内上方为浅青色标签（S1/S2/S3），下方为白色中文说明文字。步骤之间用绿色右向箭头连接，表示流程方向。\n\n具体如下：\n\n- **S1：选择文档**  \n  第一步，用户需选择待处理的文档\n\n- **S2：处理并校验**  \n  第二步，对所选文档进行处理，并执行校验操作\n\n- **S3：查看证据**  \n  第三步，查看处理与校验后生成的相关证据\n\n图片底部有一行小字注释：  \n&gt; 操作顺序示意图；不表示处理耗时或成功率。\n\n说明该图仅体现逻辑顺序，不反映性能指标。",
+      "seconds": 4.187,
+      "token_usage": {
+        "input_tokens": 560,
+        "output_tokens": 192,
+        "total_tokens": 752
+      },
+      "response_id": "chatcmpl-41e123c4-eba5-95d7-92da-a6c9d76a6d7f"
+    }
+  },
+  "status": "PASS",
+  "endpoint": "User-configured Model Studio Beijing workspace endpoint; identifier withheld"
+}

@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-09T15:43:24.226941+00:00",
+  "sources": [
+    {
+      "source_file": "LICENSE.txt",
+      "sha256": "1f8e601e52f0095373e6ed3635235235ba774273df46547f529066156e225441",
+      "bytes": 134,
+      "format": ".txt",
+      "rights": "Original project procedural fixture; CC0",
+      "path": "examples/public/manual/LICENSE.txt"
+    },
+    {
+      "source_file": "掌柜智库 图文表格手册.docx",
+      "sha256": "23d861f6fb09ea0c99d03b9acb43c26d2a6714578f43cc25be194e6a5717c4b9",
+      "bytes": 68209,
+      "format": ".docx",
+      "rights": "Original project procedural fixture; CC0",
+      "path": "examples/public/manual/掌柜智库 图文表格手册.docx"
+    },
+    {
+      "source_file": "掌柜智库 操作手册.md",
+      "sha256": "826f8601c1dde2c54ae3f7da699d42e6d68dd496b312b7030acf8845730bd2ef",
+      "bytes": 3026,
+      "format": ".md",
+      "rights": "Original project procedural fixture; CC0",
+      "path": "examples/public/manual/掌柜智库 操作手册.md"
+    },
+    {
+      "source_file": "掌柜智库 操作手册.pdf",
+      "sha256": "da99cd627755cbc369a9e066cf0318ccee94b152e6b5dad5a3b976e8d2c75fa4",
+      "bytes": 38133,
+      "format": ".pdf",
+      "rights": "Original project procedural fixture; CC0",
+      "path": "examples/public/manual/掌柜智库 操作手册.pdf"
+    },
+    {
+      "source_file": "流程 图.png",
+      "sha256": "79c59578d9bf65d1050792246aa11c69416a843cb47c99beae8d56702f28316a",
+      "bytes": 31327,
+      "format": ".png",
+      "rights": "Original project procedural fixture; CC0",
+      "path": "examples/public/manual/流程 图.png"
+    }
+  ]
+}

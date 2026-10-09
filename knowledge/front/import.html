@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件导入服务</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            /* 科技感背景 */
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 85% 30%, rgba(129, 140, 248, 0.08) 0%, transparent 50%),
+            linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            color: #e2e8f0;
+        }
+
+        h1 {
+            color: #f8fafc;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .upload-area {
+            border: 2px dashed rgba(56, 189, 248, 0.4);
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-area:hover {
+            border-color: #38bdf8;
+            background: rgba(56, 189, 248, 0.05);
+            box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+        }
+
+        .upload-text {
+            color: #94a3b8;
+            font-size: 16px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-list {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .file-item {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .file-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .file-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .file-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: #f1f5f9;
+            font-size: 16px;
+        }
+
+        .file-size {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .status-badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+            min-width: 80px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-uploading {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .status-processing {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        .status-completed {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .status-error {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        .progress-wrapper {
+            margin-top: 8px;
+            display: none;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background-color: rgba(15, 23, 42, 0.8);
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            border-radius: 3px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.2) 50%,
+                    rgba(255, 255, 255, 0) 100%
+            );
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .progress-text {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 6px;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .log-details {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #cbd5e1;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.6), rgba(30, 41, 59, 0.4));
+            border-radius: 12px;
+            padding: 16px 18px;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        }
+
+        .log-details summary {
+            cursor: pointer;
+            user-select: none;
+            color: #e2e8f0;
+            outline: none;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .log-details[open] summary {
+            margin-bottom: 4px;
+        }
+
+        .log-details summary:hover {
+            color: #38bdf8;
+        }
+
+        .log-details summary::marker {
+            color: #475569;
+        }
+
+        .log-list {
+            margin: 8px 0 0 0;
+            padding: 0 0 0 20px;
+            list-style: none;
+            max-height: 200px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* 时间线竖线 */
+        .log-list::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(56, 189, 248, 0.3), rgba(16, 185, 129, 0.3));
+            border-radius: 1px;
+        }
+
+        .log-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .log-list::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+        }
+
+        .log-list::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .log-list::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .log-list li {
+            margin: 0;
+            padding: 10px 12px;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+
+        .log-list li:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* 时间线节点圆点 */
+        .log-list li::before {
+            content: "";
+            position: absolute;
+            left: -17px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #334155;
+            background: #1e293b;
+            box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.8);
+            z-index: 1;
+        }
+
+        .log-done {
+            color: #d1fae5;
+        }
+
+        .log-done::before {
+            background: #10b981 !important;
+            border-color: #10b981 !important;
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.4), 0 0 0 3px rgba(15, 23, 42, 0.8) !important;
+        }
+
+        .log-duration {
+            margin-left: auto;
+            font-size: 12px;
+            color: #67e8f9;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 2px 12px;
+            border-radius: 12px;
+            white-space: nowrap;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            font-variant-numeric: tabular-nums;
+            flex-shrink: 0;
+        }
+
+        .log-running {
+            color: #bae6fd;
+            animation: pulseText 2s infinite;
+        }
+
+        .log-running::before {
+            background: #3b82f6 !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 8px rgba(59, 130, 246, 0.5), 0 0 0 3px rgba(15, 23, 42, 0.8) !important;
+            animation: pulseNode 2s infinite !important;
+        }
+
+        @keyframes pulseText {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes pulseNode {
+            0%, 100% {
+                box-shadow: 0 0 8px rgba(59, 130, 246, 0.5), 0 0 0 3px rgba(15, 23, 42, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 14px rgba(59, 130, 246, 0.8), 0 0 0 3px rgba(15, 23, 42, 0.8);
+            }
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+<link rel="stylesheet" href="workbench.css"><link rel="icon" href="favicon.svg"></head>
+<body>
+
+<div class="container">
+    <h1>📄 掌柜智库 · 文档管理</h1><div class="scope-bar"><a href="chat.html">进入问答</a><button id="btnLogin">本机登录</button><span id="subTitle">状态检查中</span></div><p>含图资料请用 PDF 或 DOCX。Markdown 单文件上传不会携带本地图片。只展示实际处理状态。</p>
+
+    <div class="upload-area" id="dropZone" tabindex="0" role="button" aria-label="选择导入文件">
+        <div class="upload-icon">☁️</div>
+        <div class="upload-text">点击或拖拽文件到此处 (PDF / Markdown / DOCX)</div>
+        <input type="file" id="fileInput" class="file-input"  accept=".pdf,.md,.docx">
+    </div>
+
+    <div id="fileList" class="file-list">
+    </div>
+<h2>已完成的文档</h2><div id="documents"></div></div>
+
+<script src="shared.js"></script><script src="import.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+.scope-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid #334155;color:#cbd5e1;font-size:13px}
+.scope-bar select{background:#0f172a;color:#e2e8f0;border:1px solid #475569;border-radius:8px;padding:8px;max-width:420px}
+a{color:#67e8f9}button{cursor:pointer}.source-card,.task-card{padding:14px;border:1px solid #334155;border-radius:12px;margin:10px 0;background:#172338;color:#e2e8f0;overflow-wrap:anywhere}
+.source-card img{display:block;max-width:100%;max-height:360px;margin-top:10px;border-radius:8px;background:white}
+.evidence-text,.answer{white-space:pre-wrap;overflow-wrap:anywhere}.task-events{font-size:12px;max-height:180px;overflow:auto;color:#94a3b8}
+.source-card summary{cursor:pointer;color:#67e8f9}.source-card blockquote{margin:10px 0;border-left:3px solid #22d3ee;padding-left:12px}
+.error-text{color:#fda4af}.topbar{flex-wrap:wrap}.top-actions{flex-wrap:wrap}.chat .msg>div:last-child{min-width:0}
+dialog{max-width:85vw;max-height:80vh;overflow:auto;background:#0f172a;color:#e2e8f0;border:1px solid #475569;border-radius:16px;padding:24px}dialog::backdrop{background:#0009}
+input[type=password]{padding:12px;background:#172338;color:white;border:1px solid #475569;border-radius:8px;width:90%}

@@ -1,0 +1,8 @@
+{
+  "requested_model": "qwen3-plus",
+  "listed": false,
+  "status": "FAIL",
+  "http_status": 404,
+  "error_type": "NotFoundError",
+  "code": "model_not_found"
+}

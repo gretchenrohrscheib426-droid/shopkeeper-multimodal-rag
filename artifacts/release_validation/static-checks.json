@@ -1,0 +1,61 @@
+[
+  {
+    "check": [
+      "-m",
+      "ruff",
+      "check",
+      "knowledge",
+      "scripts",
+      "tests",
+      "--exclude",
+      "knowledge/test",
+      "--select",
+      "F,E9"
+    ],
+    "exit_code": 0,
+    "seconds": 0.079,
+    "output": "All checks passed!\n"
+  },
+  {
+    "check": [
+      "-m",
+      "mypy",
+      "knowledge/core/configuration.py",
+      "knowledge/utils/image_refs.py",
+      "--explicit-package-bases",
+      "--follow-imports=silent",
+      "--ignore-missing-imports",
+      "--check-untyped-defs"
+    ],
+    "exit_code": 0,
+    "seconds": 0.203,
+    "output": "Success: no issues found in 2 source files\n"
+  },
+  {
+    "check": [
+      "--check",
+      "knowledge/front/shared.js"
+    ],
+    "exit_code": 0,
+    "seconds": 0.047,
+    "output": ""
+  },
+  {
+    "check": [
+      "--check",
+      "knowledge/front/chat.js"
+    ],
+    "exit_code": 0,
+    "seconds": 0.046,
+    "output": ""
+  },
+  {
+    "check": [
+      "--check",
+      "knowledge/front/import.js"
+    ],
+    "exit_code": 0,
+    "seconds": 0.032,
+    "output": ""
+  }
+]

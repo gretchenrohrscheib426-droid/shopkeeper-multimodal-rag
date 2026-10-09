@@ -1,0 +1,23 @@
+name: Offline contracts
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
+      - run: python -m pip install -r requirements-ci.txt
+      - run: python -m pytest tests -q --junitxml=contract-results.xml
+      - run: python -m ruff check knowledge scripts tests --exclude knowledge/test --select F,E9
+      - run: python -m mypy knowledge/core/configuration.py knowledge/utils/image_refs.py --explicit-package-bases --follow-imports=silent --ignore-missing-imports --check-untyped-defs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: offline-contract-results
+          path: contract-results.xml

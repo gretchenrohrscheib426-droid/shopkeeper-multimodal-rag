@@ -1,0 +1,117 @@
+[
+  {
+    "input": "vertical-md.json",
+    "status": "PASS",
+    "manifest": {
+      "status": "PASS",
+      "chunks": 10,
+      "images": 1,
+      "version": "8ab7bf8303ff5b26b3f6d3341b15a6f14e8f6f39b4c89ddc17bc3d6e38522172"
+    },
+    "import": {
+      "task_id": "b0ba768f1a354272b44e5225c15442ba",
+      "status": "completed",
+      "seconds": 21.438,
+      "durations": {
+        "entry_node": 0.031,
+        "md_to_img_node": 4.109,
+        "document_split_node": 0.031,
+        "item_name_recognition_node": 0.906,
+        "embedding_chunks_node": 8.562,
+        "import_milvus_node": 7.61
+      }
+    },
+    "query": {
+      "task_id": "9f631b2d301a48dfa4aa81108680ea81",
+      "status": "completed",
+      "seconds": 6.641,
+      "durations": {
+        "item_name_confirmed_node": 0.031,
+        "web_mcp_search_node": 0.047,
+        "hybrid_vector_search_node": 0.453,
+        "hyde_vector_search_node": 3.031,
+        "rrf_merge_node": 0.016,
+        "reranker_node": 2.032,
+        "answer_output_node": 1.391
+      }
+    },
+    "idempotency_status": "completed"
+  },
+  {
+    "input": "vertical-pdf.json",
+    "status": "PASS",
+    "manifest": {
+      "status": "PASS",
+      "chunks": 11,
+      "images": 1,
+      "version": "6ae339c6b67dd375377ee6bd7197c7c2a5ff715cbabfaa407a2f4d3aeae59b31"
+    },
+    "import": {
+      "task_id": "4aa29c5c8b184efb8d1d0e9ec7d2cc7d",
+      "status": "completed",
+      "seconds": 55.375,
+      "durations": {
+        "entry_node": 0.016,
+        "pdf_to_md_node": 32.281,
+        "md_to_img_node": 6.297,
+        "document_split_node": 0.015,
+        "item_name_recognition_node": 0.937,
+        "embedding_chunks_node": 8.687,
+        "import_milvus_node": 6.891
+      }
+    },
+    "query": {
+      "task_id": "3e3c4690bea042d9b6a4e3ad831c8249",
+      "status": "completed",
+      "seconds": 6.656,
+      "durations": {
+        "item_name_confirmed_node": 0.015,
+        "web_mcp_search_node": 0.047,
+        "hybrid_vector_search_node": 0.391,
+        "hyde_vector_search_node": 2.985,
+        "rrf_merge_node": 0.016,
+        "reranker_node": 2.157,
+        "answer_output_node": 1.328
+      }
+    },
+    "idempotency_status": "completed"
+  },
+  {
+    "input": "vertical-education.json",
+    "status": "PASS",
+    "manifest": {
+      "status": "PASS",
+      "chunks": 18,
+      "images": 0,
+      "version": "6058f1b537f0bbd406f3f973ab8e746d12cfcc16dd69adc9ed91be5ebf1373f4"
+    },
+    "import": {
+      "task_id": "be62dc4cf01143869e7aa12d725ae2ae",
+      "status": "completed",
+      "seconds": 0.109,
+      "durations": {}
+    },
+    "query": {
+      "task_id": "1af78028a64a49ac8038a647382e5f3c",
+      "status": "completed",
+      "seconds": 12.016,
+      "durations": {
+        "item_name_confirmed_node": 0.015,
+        "web_mcp_search_node": 0.047,
+        "hyde_vector_search_node": 7.328,
+        "hybrid_vector_search_node": 7.328,
+        "rrf_merge_node": 0.016,
+        "reranker_node": 1.438,
+        "answer_output_node": 3.063
+      }
+    },
+    "idempotency_status": "completed"
+  },
+  {
+    "input": "original_docx_table",
+    "status": "PASS",
+    "evidence": "Reconstructed from actual durable task journal; full source content excluded",
+    "import_task_id": "7de9f2e27e3641718e677ad4a5abd66f",
+    "query_task_id": "2299f688a8ee4be29e372976fb5f08da"
+  }
+]

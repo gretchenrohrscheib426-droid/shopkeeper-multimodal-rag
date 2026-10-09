@@ -1,0 +1,50 @@
+{
+  "kind": "real_http",
+  "checks": {
+    "same_session_lock": {
+      "pass": true,
+      "http_status": 409
+    },
+    "real_query": {
+      "pass": true,
+      "task_id": "0c9ef24e3acc4eaebfe4dc02c9c2dcdb",
+      "seconds": 10.312
+    },
+    "two_subscribers": {
+      "pass": true,
+      "events": 18
+    },
+    "reconnect": {
+      "pass": true,
+      "replayed_events": 8
+    },
+    "history_atomic_turn": {
+      "pass": true,
+      "messages": 2
+    },
+    "source": {
+      "pass": true,
+      "chunk_id": "03cd7cef4ba670bb86aa0bad5293d6b03ea81e5157c0fe72b506076099104d35"
+    },
+    "private_source": {
+      "pass": true,
+      "http_status": 401
+    },
+    "unsupported_question": {
+      "pass": true,
+      "task_id": "6e824e6d10ec405ca3e1a8eefb9cf67c"
+    },
+    "cancellation": {
+      "pass": true,
+      "task_id": "b6fc543a70994327a85e20f928a647fd",
+      "status": "cancelled"
+    },
+    "clarification": {
+      "pass": true,
+      "task_id": "92c16a8dc7214e51baa19960f969478d",
+      "answer_kind": "clarification"
+    }
+  },
+  "passed": 10,
+  "total": 10
+}
