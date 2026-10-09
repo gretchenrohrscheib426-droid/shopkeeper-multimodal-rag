@@ -55,6 +55,11 @@
     "bytes": 2173
   },
   {
+    "path": "artifacts/release_validation/ci-a036c4b.json",
+    "sha256": "85a97e5b84c4195da9798770a1d2822f2ca6fdea3a036e53c1b9bc96fc9ff3eb",
+    "bytes": 2986
+  },
+  {
     "path": "artifacts/release_validation/doctor.json",
     "sha256": "8a477aad180b3373858898a63cdb4c6ce7016dddc1002e248b1648d5ce7afcd6",
     "bytes": 856
@@ -93,6 +98,11 @@
     "path": "artifacts/release_validation/static-checks.json",
     "sha256": "027486a1a9f9abefc603f43c11bdacc6a29e1241e4c906f9d45ee888a074283a",
     "bytes": 1069
+  },
+  {
+    "path": "artifacts/release_validation/unit-ci-a036c4b.xml",
+    "sha256": "6855ccf10f207a455b57c562ad89a8f1876be2011a1a8da2b049d65c4474d972",
+    "bytes": 4194
   },
   {
     "path": "artifacts/release_validation/unit-final.xml",
@@ -176,8 +186,8 @@
   },
   {
     "path": "docs/VERIFICATION.md",
-    "sha256": "ae78b0ffb1d00d2d8fc07dd55069f4dc498f1c021b8fa35bb083d4cd9dc36861",
-    "bytes": 5445
+    "sha256": "c275644e0fdc133b120e7370a14b580ff2f9b8045e81680288f92494b04a6cd2",
+    "bytes": 6023
   },
   {
     "path": "docs/WORKFLOWS.md",

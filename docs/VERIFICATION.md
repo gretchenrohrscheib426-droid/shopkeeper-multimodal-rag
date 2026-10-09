@@ -63,6 +63,8 @@
 
 首个源码提交 `3389828` 的 [GitHub Actions运行](https://github.com/gretchenrohrscheib426-droid/shopkeeper-multimodal-rag/actions/runs/37958168141)在Ubuntu/Python 3.12收集测试时失败：两个测试模块因缺少Pillow无法导入，因此该次为0个测试执行，不能计为通过。原有本机环境已有Pillow 12.3.0，先前本地测试未暴露这项清单遗漏。本轮已将Pillow显式加入应用、CI和已验证版本清单；后续远程运行状态以Actions和最终交付中的CI记录为准。
 
+修正提交 `a036c4b` 的 [远程CI复测](https://github.com/gretchenrohrscheib426-droid/shopkeeper-multimodal-rag/actions/runs/37959394091)已实际成功：33/33离线测试、原有HTML表格工具检查、Ruff F/E9及两个模块mypy全部通过。依赖扫描同时补齐BeautifulSoup；仅安装到新应用叠加环境，`pip check`无冲突。该次Actions步骤与JUnit分别保存在 `artifacts/release_validation/ci-a036c4b.json`、`unit-ci-a036c4b.xml`。远程CI不连接用户数据库或付费模型；真实服务验收仍以前述本机运行证据为准。
+
 ## 尚未完成的交付边界
 
 公开可见性与课程衍生代码许可等待用户确认；现有环境可运行但没有公网资源授权。MCP联网未提供可用凭据。复杂版式、高并发、多worker、生产身份、完整备份恢复演练与独立语义准确率未验证。真实完成项与这些限制同时保留。
