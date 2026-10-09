@@ -14,6 +14,7 @@ jobs:
           cache-dependency-path: requirements-ci.txt
       - run: python -m pip install -r requirements-ci.txt
       - run: python -m pytest tests -q --junitxml=contract-results.xml
+      - run: python -c "from knowledge.utils.markdown_util import MarkdownTableLinearizer; assert 'x' in MarkdownTableLinearizer.process('<table><tr><td>x</td><td>y</td></tr></table>')"
       - run: python -m ruff check knowledge scripts tests --exclude knowledge/test --select F,E9
       - run: python -m mypy knowledge/core/configuration.py knowledge/utils/image_refs.py --explicit-package-bases --follow-imports=silent --ignore-missing-imports --check-untyped-defs
       - uses: actions/upload-artifact@v4

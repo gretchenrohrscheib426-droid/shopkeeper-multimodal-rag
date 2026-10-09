@@ -11,8 +11,8 @@
   },
   {
     "path": ".github/workflows/contracts.yml",
-    "sha256": "5f5a48dcc0475171927160ee70072efcc482bf242cf1ca836651428d7c028c49",
-    "bytes": 894
+    "sha256": "34eebe47b74fb8801fe1726b358ba8775b09a7f312ba729b5ba86ee4709a5cad",
+    "bytes": 1080
   },
   {
     "path": ".gitignore",
@@ -156,8 +156,8 @@
   },
   {
     "path": "docs/KNOWN_ISSUES.md",
-    "sha256": "244f8ad6083ba98b53045e0dcaf6651f99ccd0d5ca1b160628cb94b4765d4e0f",
-    "bytes": 2299
+    "sha256": "85b97af490c0c380679070162c3df131d88dba4747be1a53c3fcf7a74fd702cb",
+    "bytes": 2493
   },
   {
     "path": "docs/MODEL_CONFIGURATION.md",
@@ -616,18 +616,18 @@
   },
   {
     "path": "requirements-app.txt",
-    "sha256": "328cd76d952b54ab8cdcd1ad185197e8ca4bf580d2aa46f076637081b1ab3c8a",
-    "bytes": 370
+    "sha256": "c53fc96d7c48ffbe8f15d1e7324ba73eccf7607f66d8ef7fc44e936c83d18d93",
+    "bytes": 393
   },
   {
     "path": "requirements-ci.txt",
-    "sha256": "7874fd97607bd8251eb88dc05f51d87a7671e193dc3b95700527ccb3a038dd92",
-    "bytes": 363
+    "sha256": "255e506cdd1ebc1b1d0cb0d8319ca8fda70e422c844350536c4b696982babd84",
+    "bytes": 386
   },
   {
     "path": "requirements-validated.txt",
-    "sha256": "2220b97edf4b32b6f9fa9ac5ac61c6535b0287ab22f6b1ea8ce0654532e3002f",
-    "bytes": 548
+    "sha256": "d10eb267c4c80ff15329173dd9a6c1ce7a36dedefbd1179cb7109286b6876ddc",
+    "bytes": 587
   },
   {
     "path": "requirements.txt",
